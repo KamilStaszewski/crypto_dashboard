@@ -1,8 +1,9 @@
 import React from "react";
-import "./custom.scss";
-import { Context } from './Context'
-import Userlist from './components/userlist'
-import {slide as Menu} from 'react-burger-menu';
+import "./main.scss";
+import { Context } from './Context';
+import Userlist from './components/userlist';
+import Menu from './components/menu';
+
 
 
 class App extends React.Component {
@@ -23,15 +24,9 @@ class App extends React.Component {
   }
   
   render() {
-    console.log(this.state.cryptolist)
     return (
       <div>
-        <Menu>
-          <a id="home" className="menu-item" href="/">Home</a>
-          <a id="about" className="menu-item" href="/about">About</a>
-          <a id="contact" className="menu-item" href="/contact">Contact</a>
-          <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
-        </Menu>
+        <Menu />
         <Context.Provider value={this.state}>
           <Userlist />
         </Context.Provider>
