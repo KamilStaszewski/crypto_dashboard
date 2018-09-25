@@ -5,11 +5,12 @@ import Main from './main';
 import Userlist from './userlist';
 
 
+
 export default class Menu extends React.Component {
   render () {
     return (
         <Router>
-        <div className="bg-navy w-100 h-100">
+        <div>
           <Slider width={ 180 } isOpen={ false }>
             <Link className="menu-item" to="/main">Home</Link>
             <Link className="menu-item" to="/crypto">About</Link>

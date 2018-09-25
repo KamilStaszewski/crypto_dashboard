@@ -14,7 +14,7 @@ class App extends React.Component {
        cryptolist: []
     }
   }
-  
+  // bedzie lepsze https://exchangeratesapi.io/
   componentDidMount = () => {
     fetch('https://api.coinmarketcap.com/v2/ticker/?structure=array')
       .then(response => response.json())
@@ -26,9 +26,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Menu />
         <Context.Provider value={this.state}>
-          <Userlist />
+          <Menu />
         </Context.Provider>
       </div>
     )
