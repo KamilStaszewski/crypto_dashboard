@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { slide as Slider } from 'react-burger-menu';
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import '../styles/menu.scss';
+import '../../styles/menu.scss';
 
 
 
