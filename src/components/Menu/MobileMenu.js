@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { slide as Slider } from 'react-burger-menu';
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import '../../styles/menu.scss';
+import './MobileMenu.scss';
 
 
 
-class Menu extends Component {
+class MobileMenu extends Component {
   render () {
     return (
         <Router>
@@ -20,4 +20,4 @@ class Menu extends Component {
   }
 }
 
-export default Menu;
+export default MobileMenu;
