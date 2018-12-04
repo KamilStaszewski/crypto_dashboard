@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const StyledWrapper = styled.div`
-	padding: 0 200px
+	padding: 0 200px;
 
 	@media (max-width: 768px) {
     padding: 0 10px;
 		margin: 0 auto;
-		display: flex;
-		justify-content: flex-end;
+
 	}
 
 	@media (max-width: 1024px) {
@@ -18,12 +17,12 @@ const StyledWrapper = styled.div`
 `
 const StyledNav = styled.nav`
 	width: 100%;
+	transition: all 2s;
 `
 const StyledNavItemList = styled.ul`
 	display: flex;
 	justify-content: flex-end;
 	list-style: none;
-	flex-wrap: wrap;
 
 	@media (max-width: 768px) {
     flex-direction: column;
@@ -35,8 +34,8 @@ const StyledNavItem = styled.li`
 		color: #252A2D;
 	}
 	a:hover {
-			color: #1890ff;
-		}
+		color: #1890ff;
+	}
 `
 
 class Menu extends Component {
@@ -44,19 +43,19 @@ class Menu extends Component {
 		super(props)
 	
 		this.state = {
-			 isMobile: 'none'
+			 isMobile: 'block'
 		};
 	};
 
 	showMobile = () => {
 		this.setState({
 			isMobile: 'block'
-		})
+		});
 		if (this.state.isMobile === 'block') {
 			this.setState({
 				isMobile: 'none'
 			})
-		}
+		};
 	};
 	
 
