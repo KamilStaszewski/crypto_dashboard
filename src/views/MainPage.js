@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Menu from '../components/Menu/Menu';
 import UserList from '../components/UserList/UserList';
 
 class MainPage extends Component {
@@ -24,11 +23,7 @@ class MainPage extends Component {
   render() {
     console.log(this.state.data)
     return (
-      <div>
-        <Menu />
-        {/* <MobileMenu pageWrapId={ "MainPage" } /> */}
         <UserList data={this.state.data} isDataFetched={this.state.isDataFetched} />
-      </div>
     )
   }
 };
