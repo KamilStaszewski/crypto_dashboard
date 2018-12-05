@@ -17,29 +17,35 @@ const StyledCol = styled.div`
 `
 
 const StyledCard = styled.div`
+    display: flex;
+    flex-direction: column;
     border: 1px solid #ccc;
     width: 100%;
     background: #ccc;
 `
 
 
-const UserList = ({ data }) => {
-  if(!data){
+const UserList = ({ users }) => {
+  if(!users){
       return <h1>Loading...</h1>
   }
-
-  console.log(data)
 
   return (
         <StyledRow>
             {
-                data.map((element, index) => {
+                users.map((element, index) => {
                     return  (
                         <StyledCol key={index}>
                             <StyledCard>
                                 <h2>Full name: {element.name}</h2>
                                 <p>
                                     Username: {element.username}
+                                </p>
+                                <p>
+                                    Phone: {element.phone}
+                                </p>
+                                <p>
+                                    Website: <a href={element.website}>See users website</a>
                                 </p>
                             </StyledCard>
                         </StyledCol>
@@ -51,7 +57,7 @@ const UserList = ({ data }) => {
 };
 
 UserList.propTypes = {
-    data: PropTypes.array
+    users: PropTypes.array
   };
 
 export default UserList;
