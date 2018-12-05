@@ -6,7 +6,7 @@ const StyledRow = styled.div`
     display: flex;
     flex-wrap: wrap;
     height: 100vh;
-    padding: 100px;
+    padding: 0 100px;
     @media (max-width: 768px) {
         padding: initial;
     }
@@ -22,6 +22,7 @@ const StyledCard = styled.div`
     border: 1px solid #ccc;
     width: 100%;
     background: #ccc;
+    height: 100%;
 `
 
 
